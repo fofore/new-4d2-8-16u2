@@ -1,0 +1,2145 @@
+/home/anton/minming/torch/local/lib/python2.7/site-packages/torch/nn/functional.py:1749: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  "See the documentation of nn.Upsample for details.".format(mode))
+Called with args:
+Namespace(cfg_file='cfgs/vgg16.yml', checkepoch=20, checkpoint=244, checksession=1, class_agnostic=False, cuda=True, dataset='kiktech_2019jointd3', large_scale=False, load_dir='./models', mGPUs=False, net='shufflenet', parallel_type=0, set_cfgs=None, vis=False)
+Using config:
+{'ANCHOR_RATIOS': [0.5, 1, 2],
+ 'ANCHOR_SCALES': [8, 16, 32],
+ 'CROP_RESIZE_WITH_MAX_POOL': False,
+ 'CUDA': False,
+ 'DATA_DIR': '/home/anton/minming/kiktech/new-4d2-8-16u2/data',
+ 'DEDUP_BOXES': 0.0625,
+ 'EPS': 1e-14,
+ 'EXP_DIR': 'shufflenet',
+ 'FEAT_STRIDE': [16],
+ 'GPU_ID': 0,
+ 'MATLAB': 'matlab',
+ 'MAX_NUM_GT_BOXES': 4,
+ 'MOBILENET': {'DEPTH_MULTIPLIER': 1.0,
+               'FIXED_LAYERS': 5,
+               'REGU_DEPTH': False,
+               'WEIGHT_DECAY': 4e-05},
+ 'PIXEL_MEANS': array([[[102.9801, 115.9465, 122.7717]]]),
+ 'POOLING_MODE': 'align',
+ 'POOLING_SIZE': 7,
+ 'RESNET': {'FIXED_BLOCKS': 1, 'MAX_POOL': False},
+ 'RNG_SEED': 3,
+ 'ROOT_DIR': '/home/anton/minming/kiktech/new-4d2-8-16u2',
+ 'TEST': {'BBOX_REG': True,
+          'HAS_RPN': True,
+          'MAX_SIZE': 1000,
+          'MODE': 'nms',
+          'NMS': 0.3,
+          'PROPOSAL_METHOD': 'gt',
+          'RPN_MIN_SIZE': 16,
+          'RPN_NMS_THRESH': 0.7,
+          'RPN_POST_NMS_TOP_N': 300,
+          'RPN_PRE_NMS_TOP_N': 6000,
+          'RPN_TOP_N': 5000,
+          'SCALES': [600],
+          'SVM': False},
+ 'TRAIN': {'ASPECT_GROUPING': False,
+           'BATCH_SIZE': 128,
+           'BBOX_INSIDE_WEIGHTS': [1.0, 1.0, 1.0, 1.0],
+           'BBOX_NORMALIZE_MEANS': [0.0, 0.0, 0.0, 0.0],
+           'BBOX_NORMALIZE_STDS': [0.1, 0.1, 0.2, 0.2],
+           'BBOX_NORMALIZE_TARGETS': True,
+           'BBOX_NORMALIZE_TARGETS_PRECOMPUTED': True,
+           'BBOX_REG': True,
+           'BBOX_THRESH': 0.5,
+           'BG_THRESH_HI': 0.5,
+           'BG_THRESH_LO': 0.0,
+           'BIAS_DECAY': False,
+           'BN_TRAIN': False,
+           'DISPLAY': 20,
+           'DOUBLE_BIAS': False,
+           'FG_FRACTION': 0.25,
+           'FG_THRESH': 0.5,
+           'GAMMA': 0.1,
+           'HAS_RPN': True,
+           'IMS_PER_BATCH': 1,
+           'LEARNING_RATE': 0.001,
+           'MAX_SIZE': 1000,
+           'MOMENTUM': 0.9,
+           'PROPOSAL_METHOD': 'gt',
+           'RPN_BATCHSIZE': 256,
+           'RPN_BBOX_INSIDE_WEIGHTS': [1.0, 1.0, 1.0, 1.0],
+           'RPN_CLOBBER_POSITIVES': False,
+           'RPN_FG_FRACTION': 0.5,
+           'RPN_MIN_SIZE': 8,
+           'RPN_NEGATIVE_OVERLAP': 0.3,
+           'RPN_NMS_THRESH': 0.7,
+           'RPN_POSITIVE_OVERLAP': 0.7,
+           'RPN_POSITIVE_WEIGHT': -1.0,
+           'RPN_POST_NMS_TOP_N': 2000,
+           'RPN_PRE_NMS_TOP_N': 12000,
+           'SCALES': [600],
+           'SNAPSHOT_ITERS': 5000,
+           'SNAPSHOT_KEPT': 3,
+           'SNAPSHOT_PREFIX': 'res101_faster_rcnn',
+           'STEPSIZE': [30000],
+           'SUMMARY_INTERVAL': 180,
+           'TRIM_HEIGHT': 600,
+           'TRIM_WIDTH': 600,
+           'TRUNCATED': False,
+           'USE_ALL_GT': True,
+           'USE_FLIPPED': True,
+           'USE_GT': False,
+           'WEIGHT_DECAY': 0.0001},
+ 'USE_GPU_NMS': True}
+Loaded dataset `kiktech_2019jointd3_test` for training
+Set proposal method: gt
+Preparing training data...
+kiktech_2019jointd3_test gt roidb loaded from /home/anton/minming/kiktech/new-4d2-8-16u2/data/cache/kiktech_2019jointd3_test_gt_roidb.pkl
+done
+1965 roidb entries
+called freeze bn, but this not working as imagined
+Loading pretrained weights from ./models/faster_rcnn_1_3_5475.pth
+load checkpoint ./models/shufflenet/kiktech_2019jointd3/faster_rcnn_1_20_244.pth
+load model successfully!
+0
+im_detect: 1/1965 nntime 0.049s  visdet 0.013s  visseg 0.025s  1
+im_detect: 2/1965 nntime 0.029s  visdet 0.013s  visseg 0.024s  2
+im_detect: 3/1965 nntime 0.026s  visdet 0.013s  visseg 0.027s  3
+im_detect: 4/1965 nntime 0.026s  visdet 0.013s  visseg 0.027s  4
+im_detect: 5/1965 nntime 0.026s  visdet 0.013s  visseg 0.026s  5
+im_detect: 6/1965 nntime 0.026s  visdet 0.013s  visseg 0.027s  6
+im_detect: 7/1965 nntime 0.026s  visdet 0.013s  visseg 0.027s  7
+im_detect: 8/1965 nntime 0.026s  visdet 0.013s  visseg 0.027s  8
+im_detect: 9/1965 nntime 0.026s  visdet 0.013s  visseg 0.027s  9
+im_detect: 10/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  10
+im_detect: 11/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  11
+im_detect: 12/1965 nntime 0.026s  visdet 0.013s  visseg 0.027s  12
+im_detect: 13/1965 nntime 0.026s  visdet 0.013s  visseg 0.027s  13
+im_detect: 14/1965 nntime 0.026s  visdet 0.013s  visseg 0.026s  14
+im_detect: 15/1965 nntime 0.026s  visdet 0.013s  visseg 0.027s  15
+im_detect: 16/1965 nntime 0.026s  visdet 0.013s  visseg 0.026s  16
+im_detect: 17/1965 nntime 0.026s  visdet 0.013s  visseg 0.027s  17
+im_detect: 18/1965 nntime 0.026s  visdet 0.013s  visseg 0.026s  18
+im_detect: 19/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  19
+im_detect: 20/1965 nntime 0.026s  visdet 0.013s  visseg 0.026s  20
+im_detect: 21/1965 nntime 0.026s  visdet 0.013s  visseg 0.027s  21
+im_detect: 22/1965 nntime 0.026s  visdet 0.013s  visseg 0.027s  22
+im_detect: 23/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  23
+im_detect: 24/1965 nntime 0.026s  visdet 0.013s  visseg 0.027s  24
+im_detect: 25/1965 nntime 0.033s  visdet 0.017s  visseg 0.028s  25
+im_detect: 26/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  26
+im_detect: 27/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  27
+im_detect: 28/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  28
+im_detect: 29/1965 nntime 0.028s  visdet 0.013s  visseg 0.027s  29
+im_detect: 30/1965 nntime 0.026s  visdet 0.013s  visseg 0.027s  30
+im_detect: 31/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  31
+im_detect: 32/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  32
+im_detect: 33/1965 nntime 0.026s  visdet 0.013s  visseg 0.027s  33
+im_detect: 34/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  34
+im_detect: 35/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  35
+im_detect: 36/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  36
+im_detect: 37/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  37
+im_detect: 38/1965 nntime 0.026s  visdet 0.013s  visseg 0.027s  38
+im_detect: 39/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  39
+im_detect: 40/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  40
+im_detect: 41/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  41
+im_detect: 42/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  42
+im_detect: 43/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  43
+im_detect: 44/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  44
+im_detect: 45/1965 nntime 0.026s  visdet 0.013s  visseg 0.026s  45
+im_detect: 46/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  46
+im_detect: 47/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  47
+im_detect: 48/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  48
+im_detect: 49/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  49
+im_detect: 50/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  50
+im_detect: 51/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  51
+im_detect: 52/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  52
+im_detect: 53/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  53
+im_detect: 54/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  54
+im_detect: 55/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  55
+im_detect: 56/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  56
+im_detect: 57/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  57
+im_detect: 58/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  58
+im_detect: 59/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  59
+im_detect: 60/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  60
+im_detect: 61/1965 nntime 0.026s  visdet 0.013s  visseg 0.027s  61
+im_detect: 62/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  62
+im_detect: 63/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  63
+im_detect: 64/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  64
+im_detect: 65/1965 nntime 0.026s  visdet 0.013s  visseg 0.027s  65
+im_detect: 66/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  66
+im_detect: 67/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  67
+im_detect: 68/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  68
+im_detect: 69/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  69
+im_detect: 70/1965 nntime 0.026s  visdet 0.013s  visseg 0.027s  70
+im_detect: 71/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  71
+im_detect: 72/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  72
+im_detect: 73/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  73
+im_detect: 74/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  74
+im_detect: 75/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  75
+im_detect: 76/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  76
+im_detect: 77/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  77
+im_detect: 78/1965 nntime 0.026s  visdet 0.013s  visseg 0.027s  78
+im_detect: 79/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  79
+im_detect: 80/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  80
+im_detect: 81/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  81
+im_detect: 82/1965 nntime 0.026s  visdet 0.013s  visseg 0.027s  82
+im_detect: 83/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  83
+im_detect: 84/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  84
+im_detect: 85/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  85
+im_detect: 86/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  86
+im_detect: 87/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  87
+im_detect: 88/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  88
+im_detect: 89/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  89
+im_detect: 90/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  90
+im_detect: 91/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  91
+im_detect: 92/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  92
+im_detect: 93/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  93
+im_detect: 94/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  94
+im_detect: 95/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  95
+im_detect: 96/1965 nntime 0.027s  visdet 0.015s  visseg 0.027s  96
+im_detect: 97/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  97
+im_detect: 98/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  98
+im_detect: 99/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  99
+im_detect: 100/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  100
+im_detect: 101/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  101
+im_detect: 102/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  102
+im_detect: 103/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  103
+im_detect: 104/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  104
+im_detect: 105/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  105
+im_detect: 106/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  106
+im_detect: 107/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  107
+im_detect: 108/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  108
+im_detect: 109/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  109
+im_detect: 110/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  110
+im_detect: 111/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  111
+im_detect: 112/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  112
+im_detect: 113/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  113
+im_detect: 114/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  114
+im_detect: 115/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  115
+im_detect: 116/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  116
+im_detect: 117/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  117
+im_detect: 118/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  118
+im_detect: 119/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  119
+im_detect: 120/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  120
+im_detect: 121/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  121
+im_detect: 122/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  122
+im_detect: 123/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  123
+im_detect: 124/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  124
+im_detect: 125/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  125
+im_detect: 126/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  126
+im_detect: 127/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  127
+im_detect: 128/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  128
+im_detect: 129/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  129
+im_detect: 130/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  130
+im_detect: 131/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  131
+im_detect: 132/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  132
+im_detect: 133/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  133
+im_detect: 134/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  134
+im_detect: 135/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  135
+im_detect: 136/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  136
+im_detect: 137/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  137
+im_detect: 138/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  138
+im_detect: 139/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  139
+im_detect: 140/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  140
+im_detect: 141/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  141
+im_detect: 142/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  142
+im_detect: 143/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  143
+im_detect: 144/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  144
+im_detect: 145/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  145
+im_detect: 146/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  146
+im_detect: 147/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  147
+im_detect: 148/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  148
+im_detect: 149/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  149
+im_detect: 150/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  150
+im_detect: 151/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  151
+im_detect: 152/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  152
+im_detect: 153/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  153
+im_detect: 154/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  154
+im_detect: 155/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  155
+im_detect: 156/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  156
+im_detect: 157/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  157
+im_detect: 158/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  158
+im_detect: 159/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  159
+im_detect: 160/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  160
+im_detect: 161/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  161
+im_detect: 162/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  162
+im_detect: 163/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  163
+im_detect: 164/1965 nntime 0.027s  visdet 0.013s  visseg 0.033s  164
+im_detect: 165/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  165
+im_detect: 166/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  166
+im_detect: 167/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  167
+im_detect: 168/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  168
+im_detect: 169/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  169
+im_detect: 170/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  170
+im_detect: 171/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  171
+im_detect: 172/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  172
+im_detect: 173/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  173
+im_detect: 174/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  174
+im_detect: 175/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  175
+im_detect: 176/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  176
+im_detect: 177/1965 nntime 0.027s  visdet 0.014s  visseg 0.027s  177
+im_detect: 178/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  178
+im_detect: 179/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  179
+im_detect: 180/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  180
+im_detect: 181/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  181
+im_detect: 182/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  182
+im_detect: 183/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  183
+im_detect: 184/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  184
+im_detect: 185/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  185
+im_detect: 186/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  186
+im_detect: 187/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  187
+im_detect: 188/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  188
+im_detect: 189/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  189
+im_detect: 190/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  190
+im_detect: 191/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  191
+im_detect: 192/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  192
+im_detect: 193/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  193
+im_detect: 194/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  194
+im_detect: 195/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  195
+im_detect: 196/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  196
+im_detect: 197/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  197
+im_detect: 198/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  198
+im_detect: 199/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  199
+im_detect: 200/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  200
+im_detect: 201/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  201
+im_detect: 202/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  202
+im_detect: 203/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  203
+im_detect: 204/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  204
+im_detect: 205/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  205
+im_detect: 206/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  206
+im_detect: 207/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  207
+im_detect: 208/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  208
+im_detect: 209/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  209
+im_detect: 210/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  210
+im_detect: 211/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  211
+im_detect: 212/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  212
+im_detect: 213/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  213
+im_detect: 214/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  214
+im_detect: 215/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  215
+im_detect: 216/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  216
+im_detect: 217/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  217
+im_detect: 218/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  218
+im_detect: 219/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  219
+im_detect: 220/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  220
+im_detect: 221/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  221
+im_detect: 222/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  222
+im_detect: 223/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  223
+im_detect: 224/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  224
+im_detect: 225/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  225
+im_detect: 226/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  226
+im_detect: 227/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  227
+im_detect: 228/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  228
+im_detect: 229/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  229
+im_detect: 230/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  230
+im_detect: 231/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  231
+im_detect: 232/1965 nntime 0.036s  visdet 0.013s  visseg 0.026s  232
+im_detect: 233/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  233
+im_detect: 234/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  234
+im_detect: 235/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  235
+im_detect: 236/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  236
+im_detect: 237/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  237
+im_detect: 238/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  238
+im_detect: 239/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  239
+im_detect: 240/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  240
+im_detect: 241/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  241
+im_detect: 242/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  242
+im_detect: 243/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  243
+im_detect: 244/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  244
+im_detect: 245/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  245
+im_detect: 246/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  246
+im_detect: 247/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  247
+im_detect: 248/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  248
+im_detect: 249/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  249
+im_detect: 250/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  250
+im_detect: 251/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  251
+im_detect: 252/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  252
+im_detect: 253/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  253
+im_detect: 254/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  254
+im_detect: 255/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  255
+im_detect: 256/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  256
+im_detect: 257/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  257
+im_detect: 258/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  258
+im_detect: 259/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  259
+im_detect: 260/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  260
+im_detect: 261/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  261
+im_detect: 262/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  262
+im_detect: 263/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  263
+im_detect: 264/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  264
+im_detect: 265/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  265
+im_detect: 266/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  266
+im_detect: 267/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  267
+im_detect: 268/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  268
+im_detect: 269/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  269
+im_detect: 270/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  270
+im_detect: 271/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  271
+im_detect: 272/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  272
+im_detect: 273/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  273
+im_detect: 274/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  274
+im_detect: 275/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  275
+im_detect: 276/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  276
+im_detect: 277/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  277
+im_detect: 278/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  278
+im_detect: 279/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  279
+im_detect: 280/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  280
+im_detect: 281/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  281
+im_detect: 282/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  282
+im_detect: 283/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  283
+im_detect: 284/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  284
+im_detect: 285/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  285
+im_detect: 286/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  286
+im_detect: 287/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  287
+im_detect: 288/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  288
+im_detect: 289/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  289
+im_detect: 290/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  290
+im_detect: 291/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  291
+im_detect: 292/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  292
+im_detect: 293/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  293
+im_detect: 294/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  294
+im_detect: 295/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  295
+im_detect: 296/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  296
+im_detect: 297/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  297
+im_detect: 298/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  298
+im_detect: 299/1965 nntime 0.027s  visdet 0.014s  visseg 0.026s  299
+im_detect: 300/1965 nntime 0.028s  visdet 0.013s  visseg 0.027s  300
+im_detect: 301/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  301
+im_detect: 302/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  302
+im_detect: 303/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  303
+im_detect: 304/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  304
+im_detect: 305/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  305
+im_detect: 306/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  306
+im_detect: 307/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  307
+im_detect: 308/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  308
+im_detect: 309/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  309
+im_detect: 310/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  310
+im_detect: 311/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  311
+im_detect: 312/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  312
+im_detect: 313/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  313
+im_detect: 314/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  314
+im_detect: 315/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  315
+im_detect: 316/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  316
+im_detect: 317/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  317
+im_detect: 318/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  318
+im_detect: 319/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  319
+im_detect: 320/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  320
+im_detect: 321/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  321
+im_detect: 322/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  322
+im_detect: 323/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  323
+im_detect: 324/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  324
+im_detect: 325/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  325
+im_detect: 326/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  326
+im_detect: 327/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  327
+im_detect: 328/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  328
+im_detect: 329/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  329
+im_detect: 330/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  330
+im_detect: 331/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  331
+im_detect: 332/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  332
+im_detect: 333/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  333
+im_detect: 334/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  334
+im_detect: 335/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  335
+im_detect: 336/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  336
+im_detect: 337/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  337
+im_detect: 338/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  338
+im_detect: 339/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  339
+im_detect: 340/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  340
+im_detect: 341/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  341
+im_detect: 342/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  342
+im_detect: 343/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  343
+im_detect: 344/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  344
+im_detect: 345/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  345
+im_detect: 346/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  346
+im_detect: 347/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  347
+im_detect: 348/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  348
+im_detect: 349/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  349
+im_detect: 350/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  350
+im_detect: 351/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  351
+im_detect: 352/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  352
+im_detect: 353/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  353
+im_detect: 354/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  354
+im_detect: 355/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  355
+im_detect: 356/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  356
+im_detect: 357/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  357
+im_detect: 358/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  358
+im_detect: 359/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  359
+im_detect: 360/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  360
+im_detect: 361/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  361
+im_detect: 362/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  362
+im_detect: 363/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  363
+im_detect: 364/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  364
+im_detect: 365/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  365
+im_detect: 366/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  366
+im_detect: 367/1965 nntime 0.027s  visdet 0.015s  visseg 0.027s  367
+im_detect: 368/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  368
+im_detect: 369/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  369
+im_detect: 370/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  370
+im_detect: 371/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  371
+im_detect: 372/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  372
+im_detect: 373/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  373
+im_detect: 374/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  374
+im_detect: 375/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  375
+im_detect: 376/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  376
+im_detect: 377/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  377
+im_detect: 378/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  378
+im_detect: 379/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  379
+im_detect: 380/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  380
+im_detect: 381/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  381
+im_detect: 382/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  382
+im_detect: 383/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  383
+im_detect: 384/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  384
+im_detect: 385/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  385
+im_detect: 386/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  386
+im_detect: 387/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  387
+im_detect: 388/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  388
+im_detect: 389/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  389
+im_detect: 390/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  390
+im_detect: 391/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  391
+im_detect: 392/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  392
+im_detect: 393/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  393
+im_detect: 394/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  394
+im_detect: 395/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  395
+im_detect: 396/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  396
+im_detect: 397/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  397
+im_detect: 398/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  398
+im_detect: 399/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  399
+im_detect: 400/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  400
+im_detect: 401/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  401
+im_detect: 402/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  402
+im_detect: 403/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  403
+im_detect: 404/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  404
+im_detect: 405/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  405
+im_detect: 406/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  406
+im_detect: 407/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  407
+im_detect: 408/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  408
+im_detect: 409/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  409
+im_detect: 410/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  410
+im_detect: 411/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  411
+im_detect: 412/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  412
+im_detect: 413/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  413
+im_detect: 414/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  414
+im_detect: 415/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  415
+im_detect: 416/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  416
+im_detect: 417/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  417
+im_detect: 418/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  418
+im_detect: 419/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  419
+im_detect: 420/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  420
+im_detect: 421/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  421
+im_detect: 422/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  422
+im_detect: 423/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  423
+im_detect: 424/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  424
+im_detect: 425/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  425
+im_detect: 426/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  426
+im_detect: 427/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  427
+im_detect: 428/1965 nntime 0.026s  visdet 0.013s  visseg 0.027s  428
+im_detect: 429/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  429
+im_detect: 430/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  430
+im_detect: 431/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  431
+im_detect: 432/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  432
+im_detect: 433/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  433
+im_detect: 434/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  434
+im_detect: 435/1965 nntime 0.027s  visdet 0.014s  visseg 0.028s  435
+im_detect: 436/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  436
+im_detect: 437/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  437
+im_detect: 438/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  438
+im_detect: 439/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  439
+im_detect: 440/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  440
+im_detect: 441/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  441
+im_detect: 442/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  442
+im_detect: 443/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  443
+im_detect: 444/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  444
+im_detect: 445/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  445
+im_detect: 446/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  446
+im_detect: 447/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  447
+im_detect: 448/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  448
+im_detect: 449/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  449
+im_detect: 450/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  450
+im_detect: 451/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  451
+im_detect: 452/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  452
+im_detect: 453/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  453
+im_detect: 454/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  454
+im_detect: 455/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  455
+im_detect: 456/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  456
+im_detect: 457/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  457
+im_detect: 458/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  458
+im_detect: 459/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  459
+im_detect: 460/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  460
+im_detect: 461/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  461
+im_detect: 462/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  462
+im_detect: 463/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  463
+im_detect: 464/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  464
+im_detect: 465/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  465
+im_detect: 466/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  466
+im_detect: 467/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  467
+im_detect: 468/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  468
+im_detect: 469/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  469
+im_detect: 470/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  470
+im_detect: 471/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  471
+im_detect: 472/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  472
+im_detect: 473/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  473
+im_detect: 474/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  474
+im_detect: 475/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  475
+im_detect: 476/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  476
+im_detect: 477/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  477
+im_detect: 478/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  478
+im_detect: 479/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  479
+im_detect: 480/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  480
+im_detect: 481/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  481
+im_detect: 482/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  482
+im_detect: 483/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  483
+im_detect: 484/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  484
+im_detect: 485/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  485
+im_detect: 486/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  486
+im_detect: 487/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  487
+im_detect: 488/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  488
+im_detect: 489/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  489
+im_detect: 490/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  490
+im_detect: 491/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  491
+im_detect: 492/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  492
+im_detect: 493/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  493
+im_detect: 494/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  494
+im_detect: 495/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  495
+im_detect: 496/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  496
+im_detect: 497/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  497
+im_detect: 498/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  498
+im_detect: 499/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  499
+im_detect: 500/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  500
+im_detect: 501/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  501
+im_detect: 502/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  502
+im_detect: 503/1965 nntime 0.031s  visdet 0.013s  visseg 0.028s  503
+im_detect: 504/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  504
+im_detect: 505/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  505
+im_detect: 506/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  506
+im_detect: 507/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  507
+im_detect: 508/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  508
+im_detect: 509/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  509
+im_detect: 510/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  510
+im_detect: 511/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  511
+im_detect: 512/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  512
+im_detect: 513/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  513
+im_detect: 514/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  514
+im_detect: 515/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  515
+im_detect: 516/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  516
+im_detect: 517/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  517
+im_detect: 518/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  518
+im_detect: 519/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  519
+im_detect: 520/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  520
+im_detect: 521/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  521
+im_detect: 522/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  522
+im_detect: 523/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  523
+im_detect: 524/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  524
+im_detect: 525/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  525
+im_detect: 526/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  526
+im_detect: 527/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  527
+im_detect: 528/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  528
+im_detect: 529/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  529
+im_detect: 530/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  530
+im_detect: 531/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  531
+im_detect: 532/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  532
+im_detect: 533/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  533
+im_detect: 534/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  534
+im_detect: 535/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  535
+im_detect: 536/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  536
+im_detect: 537/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  537
+im_detect: 538/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  538
+im_detect: 539/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  539
+im_detect: 540/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  540
+im_detect: 541/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  541
+im_detect: 542/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  542
+im_detect: 543/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  543
+im_detect: 544/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  544
+im_detect: 545/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  545
+im_detect: 546/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  546
+im_detect: 547/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  547
+im_detect: 548/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  548
+im_detect: 549/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  549
+im_detect: 550/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  550
+im_detect: 551/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  551
+im_detect: 552/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  552
+im_detect: 553/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  553
+im_detect: 554/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  554
+im_detect: 555/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  555
+im_detect: 556/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  556
+im_detect: 557/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  557
+im_detect: 558/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  558
+im_detect: 559/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  559
+im_detect: 560/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  560
+im_detect: 561/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  561
+im_detect: 562/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  562
+im_detect: 563/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  563
+im_detect: 564/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  564
+im_detect: 565/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  565
+im_detect: 566/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  566
+im_detect: 567/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  567
+im_detect: 568/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  568
+im_detect: 569/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  569
+im_detect: 570/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  570
+im_detect: 571/1965 nntime 0.031s  visdet 0.013s  visseg 0.026s  571
+im_detect: 572/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  572
+im_detect: 573/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  573
+im_detect: 574/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  574
+im_detect: 575/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  575
+im_detect: 576/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  576
+im_detect: 577/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  577
+im_detect: 578/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  578
+im_detect: 579/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  579
+im_detect: 580/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  580
+im_detect: 581/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  581
+im_detect: 582/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  582
+im_detect: 583/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  583
+im_detect: 584/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  584
+im_detect: 585/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  585
+im_detect: 586/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  586
+im_detect: 587/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  587
+im_detect: 588/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  588
+im_detect: 589/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  589
+im_detect: 590/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  590
+im_detect: 591/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  591
+im_detect: 592/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  592
+im_detect: 593/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  593
+im_detect: 594/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  594
+im_detect: 595/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  595
+im_detect: 596/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  596
+im_detect: 597/1965 nntime 0.028s  visdet 0.013s  visseg 0.027s  597
+im_detect: 598/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  598
+im_detect: 599/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  599
+im_detect: 600/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  600
+im_detect: 601/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  601
+im_detect: 602/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  602
+im_detect: 603/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  603
+im_detect: 604/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  604
+im_detect: 605/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  605
+im_detect: 606/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  606
+im_detect: 607/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  607
+im_detect: 608/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  608
+im_detect: 609/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  609
+im_detect: 610/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  610
+im_detect: 611/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  611
+im_detect: 612/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  612
+im_detect: 613/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  613
+im_detect: 614/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  614
+im_detect: 615/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  615
+im_detect: 616/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  616
+im_detect: 617/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  617
+im_detect: 618/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  618
+im_detect: 619/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  619
+im_detect: 620/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  620
+im_detect: 621/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  621
+im_detect: 622/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  622
+im_detect: 623/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  623
+im_detect: 624/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  624
+im_detect: 625/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  625
+im_detect: 626/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  626
+im_detect: 627/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  627
+im_detect: 628/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  628
+im_detect: 629/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  629
+im_detect: 630/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  630
+im_detect: 631/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  631
+im_detect: 632/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  632
+im_detect: 633/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  633
+im_detect: 634/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  634
+im_detect: 635/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  635
+im_detect: 636/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  636
+im_detect: 637/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  637
+im_detect: 638/1965 nntime 0.027s  visdet 0.019s  visseg 0.027s  638
+im_detect: 639/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  639
+im_detect: 640/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  640
+im_detect: 641/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  641
+im_detect: 642/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  642
+im_detect: 643/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  643
+im_detect: 644/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  644
+im_detect: 645/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  645
+im_detect: 646/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  646
+im_detect: 647/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  647
+im_detect: 648/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  648
+im_detect: 649/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  649
+im_detect: 650/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  650
+im_detect: 651/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  651
+im_detect: 652/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  652
+im_detect: 653/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  653
+im_detect: 654/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  654
+im_detect: 655/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  655
+im_detect: 656/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  656
+im_detect: 657/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  657
+im_detect: 658/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  658
+im_detect: 659/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  659
+im_detect: 660/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  660
+im_detect: 661/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  661
+im_detect: 662/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  662
+im_detect: 663/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  663
+im_detect: 664/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  664
+im_detect: 665/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  665
+im_detect: 666/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  666
+im_detect: 667/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  667
+im_detect: 668/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  668
+im_detect: 669/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  669
+im_detect: 670/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  670
+im_detect: 671/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  671
+im_detect: 672/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  672
+im_detect: 673/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  673
+im_detect: 674/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  674
+im_detect: 675/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  675
+im_detect: 676/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  676
+im_detect: 677/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  677
+im_detect: 678/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  678
+im_detect: 679/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  679
+im_detect: 680/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  680
+im_detect: 681/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  681
+im_detect: 682/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  682
+im_detect: 683/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  683
+im_detect: 684/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  684
+im_detect: 685/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  685
+im_detect: 686/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  686
+im_detect: 687/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  687
+im_detect: 688/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  688
+im_detect: 689/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  689
+im_detect: 690/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  690
+im_detect: 691/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  691
+im_detect: 692/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  692
+im_detect: 693/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  693
+im_detect: 694/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  694
+im_detect: 695/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  695
+im_detect: 696/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  696
+im_detect: 697/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  697
+im_detect: 698/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  698
+im_detect: 699/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  699
+im_detect: 700/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  700
+im_detect: 701/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  701
+im_detect: 702/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  702
+im_detect: 703/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  703
+im_detect: 704/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  704
+im_detect: 705/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  705
+im_detect: 706/1965 nntime 0.027s  visdet 0.017s  visseg 0.027s  706
+im_detect: 707/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  707
+im_detect: 708/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  708
+im_detect: 709/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  709
+im_detect: 710/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  710
+im_detect: 711/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  711
+im_detect: 712/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  712
+im_detect: 713/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  713
+im_detect: 714/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  714
+im_detect: 715/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  715
+im_detect: 716/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  716
+im_detect: 717/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  717
+im_detect: 718/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  718
+im_detect: 719/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  719
+im_detect: 720/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  720
+im_detect: 721/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  721
+im_detect: 722/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  722
+im_detect: 723/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  723
+im_detect: 724/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  724
+im_detect: 725/1965 nntime 0.031s  visdet 0.017s  visseg 0.026s  725
+im_detect: 726/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  726
+im_detect: 727/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  727
+im_detect: 728/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  728
+im_detect: 729/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  729
+im_detect: 730/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  730
+im_detect: 731/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  731
+im_detect: 732/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  732
+im_detect: 733/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  733
+im_detect: 734/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  734
+im_detect: 735/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  735
+im_detect: 736/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  736
+im_detect: 737/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  737
+im_detect: 738/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  738
+im_detect: 739/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  739
+im_detect: 740/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  740
+im_detect: 741/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  741
+im_detect: 742/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  742
+im_detect: 743/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  743
+im_detect: 744/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  744
+im_detect: 745/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  745
+im_detect: 746/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  746
+im_detect: 747/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  747
+im_detect: 748/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  748
+im_detect: 749/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  749
+im_detect: 750/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  750
+im_detect: 751/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  751
+im_detect: 752/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  752
+im_detect: 753/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  753
+im_detect: 754/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  754
+im_detect: 755/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  755
+im_detect: 756/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  756
+im_detect: 757/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  757
+im_detect: 758/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  758
+im_detect: 759/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  759
+im_detect: 760/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  760
+im_detect: 761/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  761
+im_detect: 762/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  762
+im_detect: 763/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  763
+im_detect: 764/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  764
+im_detect: 765/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  765
+im_detect: 766/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  766
+im_detect: 767/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  767
+im_detect: 768/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  768
+im_detect: 769/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  769
+im_detect: 770/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  770
+im_detect: 771/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  771
+im_detect: 772/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  772
+im_detect: 773/1965 nntime 0.027s  visdet 0.017s  visseg 0.027s  773
+im_detect: 774/1965 nntime 0.029s  visdet 0.013s  visseg 0.026s  774
+im_detect: 775/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  775
+im_detect: 776/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  776
+im_detect: 777/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  777
+im_detect: 778/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  778
+im_detect: 779/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  779
+im_detect: 780/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  780
+im_detect: 781/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  781
+im_detect: 782/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  782
+im_detect: 783/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  783
+im_detect: 784/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  784
+im_detect: 785/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  785
+im_detect: 786/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  786
+im_detect: 787/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  787
+im_detect: 788/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  788
+im_detect: 789/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  789
+im_detect: 790/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  790
+im_detect: 791/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  791
+im_detect: 792/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  792
+im_detect: 793/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  793
+im_detect: 794/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  794
+im_detect: 795/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  795
+im_detect: 796/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  796
+im_detect: 797/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  797
+im_detect: 798/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  798
+im_detect: 799/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  799
+im_detect: 800/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  800
+im_detect: 801/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  801
+im_detect: 802/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  802
+im_detect: 803/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  803
+im_detect: 804/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  804
+im_detect: 805/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  805
+im_detect: 806/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  806
+im_detect: 807/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  807
+im_detect: 808/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  808
+im_detect: 809/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  809
+im_detect: 810/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  810
+im_detect: 811/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  811
+im_detect: 812/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  812
+im_detect: 813/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  813
+im_detect: 814/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  814
+im_detect: 815/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  815
+im_detect: 816/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  816
+im_detect: 817/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  817
+im_detect: 818/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  818
+im_detect: 819/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  819
+im_detect: 820/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  820
+im_detect: 821/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  821
+im_detect: 822/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  822
+im_detect: 823/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  823
+im_detect: 824/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  824
+im_detect: 825/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  825
+im_detect: 826/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  826
+im_detect: 827/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  827
+im_detect: 828/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  828
+im_detect: 829/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  829
+im_detect: 830/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  830
+im_detect: 831/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  831
+im_detect: 832/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  832
+im_detect: 833/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  833
+im_detect: 834/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  834
+im_detect: 835/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  835
+im_detect: 836/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  836
+im_detect: 837/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  837
+im_detect: 838/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  838
+im_detect: 839/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  839
+im_detect: 840/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  840
+im_detect: 841/1965 nntime 0.027s  visdet 0.014s  visseg 0.027s  841
+im_detect: 842/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  842
+im_detect: 843/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  843
+im_detect: 844/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  844
+im_detect: 845/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  845
+im_detect: 846/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  846
+im_detect: 847/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  847
+im_detect: 848/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  848
+im_detect: 849/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  849
+im_detect: 850/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  850
+im_detect: 851/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  851
+im_detect: 852/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  852
+im_detect: 853/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  853
+im_detect: 854/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  854
+im_detect: 855/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  855
+im_detect: 856/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  856
+im_detect: 857/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  857
+im_detect: 858/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  858
+im_detect: 859/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  859
+im_detect: 860/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  860
+im_detect: 861/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  861
+im_detect: 862/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  862
+im_detect: 863/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  863
+im_detect: 864/1965 nntime 0.028s  visdet 0.013s  visseg 0.027s  864
+im_detect: 865/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  865
+im_detect: 866/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  866
+im_detect: 867/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  867
+im_detect: 868/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  868
+im_detect: 869/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  869
+im_detect: 870/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  870
+im_detect: 871/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  871
+im_detect: 872/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  872
+im_detect: 873/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  873
+im_detect: 874/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  874
+im_detect: 875/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  875
+im_detect: 876/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  876
+im_detect: 877/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  877
+im_detect: 878/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  878
+im_detect: 879/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  879
+im_detect: 880/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  880
+im_detect: 881/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  881
+im_detect: 882/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  882
+im_detect: 883/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  883
+im_detect: 884/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  884
+im_detect: 885/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  885
+im_detect: 886/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  886
+im_detect: 887/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  887
+im_detect: 888/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  888
+im_detect: 889/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  889
+im_detect: 890/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  890
+im_detect: 891/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  891
+im_detect: 892/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  892
+im_detect: 893/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  893
+im_detect: 894/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  894
+im_detect: 895/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  895
+im_detect: 896/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  896
+im_detect: 897/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  897
+im_detect: 898/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  898
+im_detect: 899/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  899
+im_detect: 900/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  900
+im_detect: 901/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  901
+im_detect: 902/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  902
+im_detect: 903/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  903
+im_detect: 904/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  904
+im_detect: 905/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  905
+im_detect: 906/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  906
+im_detect: 907/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  907
+im_detect: 908/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  908
+im_detect: 909/1965 nntime 0.030s  visdet 0.013s  visseg 0.026s  909
+im_detect: 910/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  910
+im_detect: 911/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  911
+im_detect: 912/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  912
+im_detect: 913/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  913
+im_detect: 914/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  914
+im_detect: 915/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  915
+im_detect: 916/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  916
+im_detect: 917/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  917
+im_detect: 918/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  918
+im_detect: 919/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  919
+im_detect: 920/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  920
+im_detect: 921/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  921
+im_detect: 922/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  922
+im_detect: 923/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  923
+im_detect: 924/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  924
+im_detect: 925/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  925
+im_detect: 926/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  926
+im_detect: 927/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  927
+im_detect: 928/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  928
+im_detect: 929/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  929
+im_detect: 930/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  930
+im_detect: 931/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  931
+im_detect: 932/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  932
+im_detect: 933/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  933
+im_detect: 934/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  934
+im_detect: 935/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  935
+im_detect: 936/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  936
+im_detect: 937/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  937
+im_detect: 938/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  938
+im_detect: 939/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  939
+im_detect: 940/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  940
+im_detect: 941/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  941
+im_detect: 942/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  942
+im_detect: 943/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  943
+im_detect: 944/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  944
+im_detect: 945/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  945
+im_detect: 946/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  946
+im_detect: 947/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  947
+im_detect: 948/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  948
+im_detect: 949/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  949
+im_detect: 950/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  950
+im_detect: 951/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  951
+im_detect: 952/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  952
+im_detect: 953/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  953
+im_detect: 954/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  954
+im_detect: 955/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  955
+im_detect: 956/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  956
+im_detect: 957/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  957
+im_detect: 958/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  958
+im_detect: 959/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  959
+im_detect: 960/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  960
+im_detect: 961/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  961
+im_detect: 962/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  962
+im_detect: 963/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  963
+im_detect: 964/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  964
+im_detect: 965/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  965
+im_detect: 966/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  966
+im_detect: 967/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  967
+im_detect: 968/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  968
+im_detect: 969/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  969
+im_detect: 970/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  970
+im_detect: 971/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  971
+im_detect: 972/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  972
+im_detect: 973/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  973
+im_detect: 974/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  974
+im_detect: 975/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  975
+im_detect: 976/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  976
+im_detect: 977/1965 nntime 0.031s  visdet 0.013s  visseg 0.026s  977
+im_detect: 978/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  978
+im_detect: 979/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  979
+im_detect: 980/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  980
+im_detect: 981/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  981
+im_detect: 982/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  982
+im_detect: 983/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  983
+im_detect: 984/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  984
+im_detect: 985/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  985
+im_detect: 986/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  986
+im_detect: 987/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  987
+im_detect: 988/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  988
+im_detect: 989/1965 nntime 0.027s  visdet 0.014s  visseg 0.027s  989
+im_detect: 990/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  990
+im_detect: 991/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  991
+im_detect: 992/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  992
+im_detect: 993/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  993
+im_detect: 994/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  994
+im_detect: 995/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  995
+im_detect: 996/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  996
+im_detect: 997/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  997
+im_detect: 998/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  998
+im_detect: 999/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  999
+im_detect: 1000/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1000
+im_detect: 1001/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1001
+im_detect: 1002/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1002
+im_detect: 1003/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1003
+im_detect: 1004/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1004
+im_detect: 1005/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1005
+im_detect: 1006/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1006
+im_detect: 1007/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1007
+im_detect: 1008/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1008
+im_detect: 1009/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1009
+im_detect: 1010/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1010
+im_detect: 1011/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1011
+im_detect: 1012/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1012
+im_detect: 1013/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1013
+im_detect: 1014/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1014
+im_detect: 1015/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1015
+im_detect: 1016/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1016
+im_detect: 1017/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1017
+im_detect: 1018/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1018
+im_detect: 1019/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1019
+im_detect: 1020/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1020
+im_detect: 1021/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1021
+im_detect: 1022/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1022
+im_detect: 1023/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1023
+im_detect: 1024/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1024
+im_detect: 1025/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1025
+im_detect: 1026/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1026
+im_detect: 1027/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1027
+im_detect: 1028/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1028
+im_detect: 1029/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1029
+im_detect: 1030/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1030
+im_detect: 1031/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1031
+im_detect: 1032/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1032
+im_detect: 1033/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1033
+im_detect: 1034/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1034
+im_detect: 1035/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1035
+im_detect: 1036/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1036
+im_detect: 1037/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1037
+im_detect: 1038/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1038
+im_detect: 1039/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1039
+im_detect: 1040/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1040
+im_detect: 1041/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1041
+im_detect: 1042/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1042
+im_detect: 1043/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1043
+im_detect: 1044/1965 nntime 0.027s  visdet 0.014s  visseg 0.027s  1044
+im_detect: 1045/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1045
+im_detect: 1046/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1046
+im_detect: 1047/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1047
+im_detect: 1048/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1048
+im_detect: 1049/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1049
+im_detect: 1050/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1050
+im_detect: 1051/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1051
+im_detect: 1052/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1052
+im_detect: 1053/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1053
+im_detect: 1054/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1054
+im_detect: 1055/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1055
+im_detect: 1056/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1056
+im_detect: 1057/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1057
+im_detect: 1058/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1058
+im_detect: 1059/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1059
+im_detect: 1060/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1060
+im_detect: 1061/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1061
+im_detect: 1062/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1062
+im_detect: 1063/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1063
+im_detect: 1064/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1064
+im_detect: 1065/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1065
+im_detect: 1066/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1066
+im_detect: 1067/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1067
+im_detect: 1068/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1068
+im_detect: 1069/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1069
+im_detect: 1070/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1070
+im_detect: 1071/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1071
+im_detect: 1072/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1072
+im_detect: 1073/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1073
+im_detect: 1074/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1074
+im_detect: 1075/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1075
+im_detect: 1076/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1076
+im_detect: 1077/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1077
+im_detect: 1078/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1078
+im_detect: 1079/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1079
+im_detect: 1080/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1080
+im_detect: 1081/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1081
+im_detect: 1082/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1082
+im_detect: 1083/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1083
+im_detect: 1084/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1084
+im_detect: 1085/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1085
+im_detect: 1086/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1086
+im_detect: 1087/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1087
+im_detect: 1088/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1088
+im_detect: 1089/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1089
+im_detect: 1090/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1090
+im_detect: 1091/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1091
+im_detect: 1092/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1092
+im_detect: 1093/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1093
+im_detect: 1094/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1094
+im_detect: 1095/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1095
+im_detect: 1096/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1096
+im_detect: 1097/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1097
+im_detect: 1098/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1098
+im_detect: 1099/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1099
+im_detect: 1100/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1100
+im_detect: 1101/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1101
+im_detect: 1102/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1102
+im_detect: 1103/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1103
+im_detect: 1104/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1104
+im_detect: 1105/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1105
+im_detect: 1106/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1106
+im_detect: 1107/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1107
+im_detect: 1108/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1108
+im_detect: 1109/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1109
+im_detect: 1110/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1110
+im_detect: 1111/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1111
+im_detect: 1112/1965 nntime 0.031s  visdet 0.013s  visseg 0.024s  1112
+im_detect: 1113/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1113
+im_detect: 1114/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1114
+im_detect: 1115/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1115
+im_detect: 1116/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1116
+im_detect: 1117/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1117
+im_detect: 1118/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1118
+im_detect: 1119/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1119
+im_detect: 1120/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1120
+im_detect: 1121/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1121
+im_detect: 1122/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1122
+im_detect: 1123/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1123
+im_detect: 1124/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1124
+im_detect: 1125/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1125
+im_detect: 1126/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1126
+im_detect: 1127/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1127
+im_detect: 1128/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1128
+im_detect: 1129/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1129
+im_detect: 1130/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1130
+im_detect: 1131/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1131
+im_detect: 1132/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1132
+im_detect: 1133/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1133
+im_detect: 1134/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1134
+im_detect: 1135/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1135
+im_detect: 1136/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1136
+im_detect: 1137/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1137
+im_detect: 1138/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1138
+im_detect: 1139/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1139
+im_detect: 1140/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1140
+im_detect: 1141/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1141
+im_detect: 1142/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1142
+im_detect: 1143/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1143
+im_detect: 1144/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1144
+im_detect: 1145/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1145
+im_detect: 1146/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1146
+im_detect: 1147/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1147
+im_detect: 1148/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1148
+im_detect: 1149/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1149
+im_detect: 1150/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1150
+im_detect: 1151/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1151
+im_detect: 1152/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1152
+im_detect: 1153/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1153
+im_detect: 1154/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1154
+im_detect: 1155/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1155
+im_detect: 1156/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1156
+im_detect: 1157/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1157
+im_detect: 1158/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1158
+im_detect: 1159/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1159
+im_detect: 1160/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1160
+im_detect: 1161/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1161
+im_detect: 1162/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1162
+im_detect: 1163/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1163
+im_detect: 1164/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1164
+im_detect: 1165/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1165
+im_detect: 1166/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1166
+im_detect: 1167/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1167
+im_detect: 1168/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1168
+im_detect: 1169/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1169
+im_detect: 1170/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1170
+im_detect: 1171/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1171
+im_detect: 1172/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1172
+im_detect: 1173/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1173
+im_detect: 1174/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1174
+im_detect: 1175/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1175
+im_detect: 1176/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1176
+im_detect: 1177/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1177
+im_detect: 1178/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1178
+im_detect: 1179/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1179
+im_detect: 1180/1965 nntime 0.028s  visdet 0.013s  visseg 0.027s  1180
+im_detect: 1181/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1181
+im_detect: 1182/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1182
+im_detect: 1183/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1183
+im_detect: 1184/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1184
+im_detect: 1185/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1185
+im_detect: 1186/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1186
+im_detect: 1187/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1187
+im_detect: 1188/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1188
+im_detect: 1189/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1189
+im_detect: 1190/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1190
+im_detect: 1191/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1191
+im_detect: 1192/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1192
+im_detect: 1193/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1193
+im_detect: 1194/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1194
+im_detect: 1195/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1195
+im_detect: 1196/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1196
+im_detect: 1197/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1197
+im_detect: 1198/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1198
+im_detect: 1199/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1199
+im_detect: 1200/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1200
+im_detect: 1201/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1201
+im_detect: 1202/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1202
+im_detect: 1203/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1203
+im_detect: 1204/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1204
+im_detect: 1205/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1205
+im_detect: 1206/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1206
+im_detect: 1207/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1207
+im_detect: 1208/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1208
+im_detect: 1209/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1209
+im_detect: 1210/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1210
+im_detect: 1211/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1211
+im_detect: 1212/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1212
+im_detect: 1213/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1213
+im_detect: 1214/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1214
+im_detect: 1215/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1215
+im_detect: 1216/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1216
+im_detect: 1217/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1217
+im_detect: 1218/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1218
+im_detect: 1219/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1219
+im_detect: 1220/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1220
+im_detect: 1221/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1221
+im_detect: 1222/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1222
+im_detect: 1223/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1223
+im_detect: 1224/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1224
+im_detect: 1225/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1225
+im_detect: 1226/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1226
+im_detect: 1227/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1227
+im_detect: 1228/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1228
+im_detect: 1229/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1229
+im_detect: 1230/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1230
+im_detect: 1231/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1231
+im_detect: 1232/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1232
+im_detect: 1233/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1233
+im_detect: 1234/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1234
+im_detect: 1235/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1235
+im_detect: 1236/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1236
+im_detect: 1237/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1237
+im_detect: 1238/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1238
+im_detect: 1239/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1239
+im_detect: 1240/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1240
+im_detect: 1241/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1241
+im_detect: 1242/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1242
+im_detect: 1243/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1243
+im_detect: 1244/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1244
+im_detect: 1245/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1245
+im_detect: 1246/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1246
+im_detect: 1247/1965 nntime 0.027s  visdet 0.021s  visseg 0.026s  1247
+im_detect: 1248/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1248
+im_detect: 1249/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1249
+im_detect: 1250/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1250
+im_detect: 1251/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1251
+im_detect: 1252/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1252
+im_detect: 1253/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1253
+im_detect: 1254/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1254
+im_detect: 1255/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1255
+im_detect: 1256/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1256
+im_detect: 1257/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1257
+im_detect: 1258/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1258
+im_detect: 1259/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1259
+im_detect: 1260/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1260
+im_detect: 1261/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1261
+im_detect: 1262/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1262
+im_detect: 1263/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1263
+im_detect: 1264/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1264
+im_detect: 1265/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1265
+im_detect: 1266/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1266
+im_detect: 1267/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1267
+im_detect: 1268/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1268
+im_detect: 1269/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1269
+im_detect: 1270/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1270
+im_detect: 1271/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1271
+im_detect: 1272/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1272
+im_detect: 1273/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1273
+im_detect: 1274/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1274
+im_detect: 1275/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1275
+im_detect: 1276/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1276
+im_detect: 1277/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1277
+im_detect: 1278/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1278
+im_detect: 1279/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1279
+im_detect: 1280/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1280
+im_detect: 1281/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1281
+im_detect: 1282/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1282
+im_detect: 1283/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1283
+im_detect: 1284/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1284
+im_detect: 1285/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1285
+im_detect: 1286/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1286
+im_detect: 1287/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1287
+im_detect: 1288/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1288
+im_detect: 1289/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1289
+im_detect: 1290/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1290
+im_detect: 1291/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1291
+im_detect: 1292/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1292
+im_detect: 1293/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1293
+im_detect: 1294/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1294
+im_detect: 1295/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1295
+im_detect: 1296/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1296
+im_detect: 1297/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1297
+im_detect: 1298/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1298
+im_detect: 1299/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1299
+im_detect: 1300/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1300
+im_detect: 1301/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1301
+im_detect: 1302/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1302
+im_detect: 1303/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1303
+im_detect: 1304/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1304
+im_detect: 1305/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1305
+im_detect: 1306/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1306
+im_detect: 1307/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1307
+im_detect: 1308/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1308
+im_detect: 1309/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1309
+im_detect: 1310/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1310
+im_detect: 1311/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1311
+im_detect: 1312/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1312
+im_detect: 1313/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1313
+im_detect: 1314/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1314
+im_detect: 1315/1965 nntime 0.027s  visdet 0.014s  visseg 0.027s  1315
+im_detect: 1316/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1316
+im_detect: 1317/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1317
+im_detect: 1318/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1318
+im_detect: 1319/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1319
+im_detect: 1320/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1320
+im_detect: 1321/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1321
+im_detect: 1322/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1322
+im_detect: 1323/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1323
+im_detect: 1324/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1324
+im_detect: 1325/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1325
+im_detect: 1326/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1326
+im_detect: 1327/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1327
+im_detect: 1328/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1328
+im_detect: 1329/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1329
+im_detect: 1330/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1330
+im_detect: 1331/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1331
+im_detect: 1332/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1332
+im_detect: 1333/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1333
+im_detect: 1334/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1334
+im_detect: 1335/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1335
+im_detect: 1336/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1336
+im_detect: 1337/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1337
+im_detect: 1338/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1338
+im_detect: 1339/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1339
+im_detect: 1340/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1340
+im_detect: 1341/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1341
+im_detect: 1342/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1342
+im_detect: 1343/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1343
+im_detect: 1344/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1344
+im_detect: 1345/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1345
+im_detect: 1346/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1346
+im_detect: 1347/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1347
+im_detect: 1348/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1348
+im_detect: 1349/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1349
+im_detect: 1350/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1350
+im_detect: 1351/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1351
+im_detect: 1352/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1352
+im_detect: 1353/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1353
+im_detect: 1354/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1354
+im_detect: 1355/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1355
+im_detect: 1356/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1356
+im_detect: 1357/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1357
+im_detect: 1358/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1358
+im_detect: 1359/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1359
+im_detect: 1360/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1360
+im_detect: 1361/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1361
+im_detect: 1362/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1362
+im_detect: 1363/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1363
+im_detect: 1364/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1364
+im_detect: 1365/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1365
+im_detect: 1366/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1366
+im_detect: 1367/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1367
+im_detect: 1368/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1368
+im_detect: 1369/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1369
+im_detect: 1370/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1370
+im_detect: 1371/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1371
+im_detect: 1372/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1372
+im_detect: 1373/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1373
+im_detect: 1374/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1374
+im_detect: 1375/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1375
+im_detect: 1376/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1376
+im_detect: 1377/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1377
+im_detect: 1378/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1378
+im_detect: 1379/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1379
+im_detect: 1380/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1380
+im_detect: 1381/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1381
+im_detect: 1382/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1382
+im_detect: 1383/1965 nntime 0.030s  visdet 0.013s  visseg 0.027s  1383
+im_detect: 1384/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1384
+im_detect: 1385/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1385
+im_detect: 1386/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1386
+im_detect: 1387/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1387
+im_detect: 1388/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1388
+im_detect: 1389/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1389
+im_detect: 1390/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1390
+im_detect: 1391/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1391
+im_detect: 1392/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1392
+im_detect: 1393/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1393
+im_detect: 1394/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1394
+im_detect: 1395/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1395
+im_detect: 1396/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1396
+im_detect: 1397/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1397
+im_detect: 1398/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1398
+im_detect: 1399/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1399
+im_detect: 1400/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1400
+im_detect: 1401/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1401
+im_detect: 1402/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1402
+im_detect: 1403/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1403
+im_detect: 1404/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1404
+im_detect: 1405/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1405
+im_detect: 1406/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1406
+im_detect: 1407/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1407
+im_detect: 1408/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1408
+im_detect: 1409/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1409
+im_detect: 1410/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1410
+im_detect: 1411/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1411
+im_detect: 1412/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1412
+im_detect: 1413/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1413
+im_detect: 1414/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1414
+im_detect: 1415/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1415
+im_detect: 1416/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1416
+im_detect: 1417/1965 nntime 0.028s  visdet 0.013s  visseg 0.027s  1417
+im_detect: 1418/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1418
+im_detect: 1419/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1419
+im_detect: 1420/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1420
+im_detect: 1421/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1421
+im_detect: 1422/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1422
+im_detect: 1423/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1423
+im_detect: 1424/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1424
+im_detect: 1425/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1425
+im_detect: 1426/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1426
+im_detect: 1427/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1427
+im_detect: 1428/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1428
+im_detect: 1429/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1429
+im_detect: 1430/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1430
+im_detect: 1431/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1431
+im_detect: 1432/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1432
+im_detect: 1433/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1433
+im_detect: 1434/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1434
+im_detect: 1435/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1435
+im_detect: 1436/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1436
+im_detect: 1437/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1437
+im_detect: 1438/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1438
+im_detect: 1439/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1439
+im_detect: 1440/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1440
+im_detect: 1441/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1441
+im_detect: 1442/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1442
+im_detect: 1443/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1443
+im_detect: 1444/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1444
+im_detect: 1445/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1445
+im_detect: 1446/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1446
+im_detect: 1447/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1447
+im_detect: 1448/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1448
+im_detect: 1449/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1449
+im_detect: 1450/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1450
+im_detect: 1451/1965 nntime 0.030s  visdet 0.013s  visseg 0.026s  1451
+im_detect: 1452/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1452
+im_detect: 1453/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1453
+im_detect: 1454/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1454
+im_detect: 1455/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1455
+im_detect: 1456/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1456
+im_detect: 1457/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1457
+im_detect: 1458/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1458
+im_detect: 1459/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1459
+im_detect: 1460/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1460
+im_detect: 1461/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1461
+im_detect: 1462/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1462
+im_detect: 1463/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1463
+im_detect: 1464/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1464
+im_detect: 1465/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1465
+im_detect: 1466/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1466
+im_detect: 1467/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1467
+im_detect: 1468/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1468
+im_detect: 1469/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1469
+im_detect: 1470/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1470
+im_detect: 1471/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1471
+im_detect: 1472/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1472
+im_detect: 1473/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1473
+im_detect: 1474/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1474
+im_detect: 1475/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1475
+im_detect: 1476/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1476
+im_detect: 1477/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1477
+im_detect: 1478/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1478
+im_detect: 1479/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1479
+im_detect: 1480/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1480
+im_detect: 1481/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1481
+im_detect: 1482/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1482
+im_detect: 1483/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1483
+im_detect: 1484/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1484
+im_detect: 1485/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1485
+im_detect: 1486/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1486
+im_detect: 1487/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1487
+im_detect: 1488/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1488
+im_detect: 1489/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1489
+im_detect: 1490/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1490
+im_detect: 1491/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1491
+im_detect: 1492/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1492
+im_detect: 1493/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1493
+im_detect: 1494/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1494
+im_detect: 1495/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1495
+im_detect: 1496/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1496
+im_detect: 1497/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1497
+im_detect: 1498/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1498
+im_detect: 1499/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1499
+im_detect: 1500/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1500
+im_detect: 1501/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1501
+im_detect: 1502/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1502
+im_detect: 1503/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1503
+im_detect: 1504/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1504
+im_detect: 1505/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1505
+im_detect: 1506/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1506
+im_detect: 1507/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1507
+im_detect: 1508/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1508
+im_detect: 1509/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1509
+im_detect: 1510/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1510
+im_detect: 1511/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1511
+im_detect: 1512/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1512
+im_detect: 1513/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1513
+im_detect: 1514/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1514
+im_detect: 1515/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1515
+im_detect: 1516/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1516
+im_detect: 1517/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1517
+im_detect: 1518/1965 nntime 0.027s  visdet 0.018s  visseg 0.026s  1518
+im_detect: 1519/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1519
+im_detect: 1520/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1520
+im_detect: 1521/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1521
+im_detect: 1522/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1522
+im_detect: 1523/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1523
+im_detect: 1524/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1524
+im_detect: 1525/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1525
+im_detect: 1526/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1526
+im_detect: 1527/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1527
+im_detect: 1528/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1528
+im_detect: 1529/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1529
+im_detect: 1530/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1530
+im_detect: 1531/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1531
+im_detect: 1532/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1532
+im_detect: 1533/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1533
+im_detect: 1534/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1534
+im_detect: 1535/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1535
+im_detect: 1536/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1536
+im_detect: 1537/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1537
+im_detect: 1538/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1538
+im_detect: 1539/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1539
+im_detect: 1540/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1540
+im_detect: 1541/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1541
+im_detect: 1542/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1542
+im_detect: 1543/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1543
+im_detect: 1544/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1544
+im_detect: 1545/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1545
+im_detect: 1546/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1546
+im_detect: 1547/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1547
+im_detect: 1548/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1548
+im_detect: 1549/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1549
+im_detect: 1550/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1550
+im_detect: 1551/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1551
+im_detect: 1552/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1552
+im_detect: 1553/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1553
+im_detect: 1554/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1554
+im_detect: 1555/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1555
+im_detect: 1556/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1556
+im_detect: 1557/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1557
+im_detect: 1558/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1558
+im_detect: 1559/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1559
+im_detect: 1560/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1560
+im_detect: 1561/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1561
+im_detect: 1562/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1562
+im_detect: 1563/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1563
+im_detect: 1564/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1564
+im_detect: 1565/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1565
+im_detect: 1566/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1566
+im_detect: 1567/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1567
+im_detect: 1568/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1568
+im_detect: 1569/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1569
+im_detect: 1570/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1570
+im_detect: 1571/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1571
+im_detect: 1572/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1572
+im_detect: 1573/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1573
+im_detect: 1574/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1574
+im_detect: 1575/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1575
+im_detect: 1576/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1576
+im_detect: 1577/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1577
+im_detect: 1578/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1578
+im_detect: 1579/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1579
+im_detect: 1580/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1580
+im_detect: 1581/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1581
+im_detect: 1582/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1582
+im_detect: 1583/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1583
+im_detect: 1584/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1584
+im_detect: 1585/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1585
+im_detect: 1586/1965 nntime 0.027s  visdet 0.014s  visseg 0.027s  1586
+im_detect: 1587/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1587
+im_detect: 1588/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1588
+im_detect: 1589/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1589
+im_detect: 1590/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1590
+im_detect: 1591/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1591
+im_detect: 1592/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1592
+im_detect: 1593/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1593
+im_detect: 1594/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1594
+im_detect: 1595/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1595
+im_detect: 1596/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1596
+im_detect: 1597/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1597
+im_detect: 1598/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1598
+im_detect: 1599/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1599
+im_detect: 1600/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1600
+im_detect: 1601/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1601
+im_detect: 1602/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1602
+im_detect: 1603/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1603
+im_detect: 1604/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1604
+im_detect: 1605/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1605
+im_detect: 1606/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1606
+im_detect: 1607/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1607
+im_detect: 1608/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1608
+im_detect: 1609/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1609
+im_detect: 1610/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1610
+im_detect: 1611/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1611
+im_detect: 1612/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1612
+im_detect: 1613/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1613
+im_detect: 1614/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1614
+im_detect: 1615/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1615
+im_detect: 1616/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1616
+im_detect: 1617/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1617
+im_detect: 1618/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1618
+im_detect: 1619/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1619
+im_detect: 1620/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1620
+im_detect: 1621/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1621
+im_detect: 1622/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1622
+im_detect: 1623/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1623
+im_detect: 1624/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1624
+im_detect: 1625/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1625
+im_detect: 1626/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1626
+im_detect: 1627/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1627
+im_detect: 1628/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1628
+im_detect: 1629/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1629
+im_detect: 1630/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1630
+im_detect: 1631/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1631
+im_detect: 1632/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1632
+im_detect: 1633/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1633
+im_detect: 1634/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1634
+im_detect: 1635/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1635
+im_detect: 1636/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1636
+im_detect: 1637/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1637
+im_detect: 1638/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1638
+im_detect: 1639/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1639
+im_detect: 1640/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1640
+im_detect: 1641/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1641
+im_detect: 1642/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1642
+im_detect: 1643/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1643
+im_detect: 1644/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1644
+im_detect: 1645/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1645
+im_detect: 1646/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1646
+im_detect: 1647/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1647
+im_detect: 1648/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1648
+im_detect: 1649/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1649
+im_detect: 1650/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1650
+im_detect: 1651/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1651
+im_detect: 1652/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1652
+im_detect: 1653/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1653
+im_detect: 1654/1965 nntime 0.029s  visdet 0.013s  visseg 0.027s  1654
+im_detect: 1655/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1655
+im_detect: 1656/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1656
+im_detect: 1657/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1657
+im_detect: 1658/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1658
+im_detect: 1659/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1659
+im_detect: 1660/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1660
+im_detect: 1661/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1661
+im_detect: 1662/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1662
+im_detect: 1663/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1663
+im_detect: 1664/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1664
+im_detect: 1665/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1665
+im_detect: 1666/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1666
+im_detect: 1667/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1667
+im_detect: 1668/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1668
+im_detect: 1669/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1669
+im_detect: 1670/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1670
+im_detect: 1671/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1671
+im_detect: 1672/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1672
+im_detect: 1673/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1673
+im_detect: 1674/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1674
+im_detect: 1675/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1675
+im_detect: 1676/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1676
+im_detect: 1677/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1677
+im_detect: 1678/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1678
+im_detect: 1679/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1679
+im_detect: 1680/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1680
+im_detect: 1681/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1681
+im_detect: 1682/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1682
+im_detect: 1683/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1683
+im_detect: 1684/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1684
+im_detect: 1685/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1685
+im_detect: 1686/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1686
+im_detect: 1687/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1687
+im_detect: 1688/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1688
+im_detect: 1689/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1689
+im_detect: 1690/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1690
+im_detect: 1691/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1691
+im_detect: 1692/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1692
+im_detect: 1693/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1693
+im_detect: 1694/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1694
+im_detect: 1695/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1695
+im_detect: 1696/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1696
+im_detect: 1697/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1697
+im_detect: 1698/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1698
+im_detect: 1699/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1699
+im_detect: 1700/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1700
+im_detect: 1701/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1701
+im_detect: 1702/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1702
+im_detect: 1703/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1703
+im_detect: 1704/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1704
+im_detect: 1705/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1705
+im_detect: 1706/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1706
+im_detect: 1707/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1707
+im_detect: 1708/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1708
+im_detect: 1709/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1709
+im_detect: 1710/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1710
+im_detect: 1711/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1711
+im_detect: 1712/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1712
+im_detect: 1713/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1713
+im_detect: 1714/1965 nntime 0.028s  visdet 0.013s  visseg 0.026s  1714
+im_detect: 1715/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1715
+im_detect: 1716/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1716
+im_detect: 1717/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1717
+im_detect: 1718/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1718
+im_detect: 1719/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1719
+im_detect: 1720/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1720
+im_detect: 1721/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1721
+im_detect: 1722/1965 nntime 0.035s  visdet 0.013s  visseg 0.026s  1722
+im_detect: 1723/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1723
+im_detect: 1724/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1724
+im_detect: 1725/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1725
+im_detect: 1726/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1726
+im_detect: 1727/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1727
+im_detect: 1728/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1728
+im_detect: 1729/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1729
+im_detect: 1730/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1730
+im_detect: 1731/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1731
+im_detect: 1732/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1732
+im_detect: 1733/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1733
+im_detect: 1734/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1734
+im_detect: 1735/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1735
+im_detect: 1736/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1736
+im_detect: 1737/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1737
+im_detect: 1738/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1738
+im_detect: 1739/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1739
+im_detect: 1740/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1740
+im_detect: 1741/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1741
+im_detect: 1742/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1742
+im_detect: 1743/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1743
+im_detect: 1744/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1744
+im_detect: 1745/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1745
+im_detect: 1746/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1746
+im_detect: 1747/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1747
+im_detect: 1748/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1748
+im_detect: 1749/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1749
+im_detect: 1750/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1750
+im_detect: 1751/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1751
+im_detect: 1752/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1752
+im_detect: 1753/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1753
+im_detect: 1754/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1754
+im_detect: 1755/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1755
+im_detect: 1756/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1756
+im_detect: 1757/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1757
+im_detect: 1758/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1758
+im_detect: 1759/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1759
+im_detect: 1760/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1760
+im_detect: 1761/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1761
+im_detect: 1762/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1762
+im_detect: 1763/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1763
+im_detect: 1764/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1764
+im_detect: 1765/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1765
+im_detect: 1766/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1766
+im_detect: 1767/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1767
+im_detect: 1768/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1768
+im_detect: 1769/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1769
+im_detect: 1770/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1770
+im_detect: 1771/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1771
+im_detect: 1772/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1772
+im_detect: 1773/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1773
+im_detect: 1774/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1774
+im_detect: 1775/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1775
+im_detect: 1776/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1776
+im_detect: 1777/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1777
+im_detect: 1778/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1778
+im_detect: 1779/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1779
+im_detect: 1780/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1780
+im_detect: 1781/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1781
+im_detect: 1782/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1782
+im_detect: 1783/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1783
+im_detect: 1784/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1784
+im_detect: 1785/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1785
+im_detect: 1786/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1786
+im_detect: 1787/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1787
+im_detect: 1788/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1788
+im_detect: 1789/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1789
+im_detect: 1790/1965 nntime 0.030s  visdet 0.013s  visseg 0.026s  1790
+im_detect: 1791/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1791
+im_detect: 1792/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1792
+im_detect: 1793/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1793
+im_detect: 1794/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1794
+im_detect: 1795/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1795
+im_detect: 1796/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1796
+im_detect: 1797/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1797
+im_detect: 1798/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1798
+im_detect: 1799/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1799
+im_detect: 1800/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1800
+im_detect: 1801/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1801
+im_detect: 1802/1965 nntime 0.030s  visdet 0.015s  visseg 0.027s  1802
+im_detect: 1803/1965 nntime 0.028s  visdet 0.014s  visseg 0.027s  1803
+im_detect: 1804/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1804
+im_detect: 1805/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1805
+im_detect: 1806/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1806
+im_detect: 1807/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1807
+im_detect: 1808/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1808
+im_detect: 1809/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1809
+im_detect: 1810/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1810
+im_detect: 1811/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1811
+im_detect: 1812/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1812
+im_detect: 1813/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1813
+im_detect: 1814/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1814
+im_detect: 1815/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1815
+im_detect: 1816/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1816
+im_detect: 1817/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1817
+im_detect: 1818/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1818
+im_detect: 1819/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1819
+im_detect: 1820/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1820
+im_detect: 1821/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1821
+im_detect: 1822/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1822
+im_detect: 1823/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1823
+im_detect: 1824/1965 nntime 0.028s  visdet 0.013s  visseg 0.026s  1824
+im_detect: 1825/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1825
+im_detect: 1826/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1826
+im_detect: 1827/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1827
+im_detect: 1828/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1828
+im_detect: 1829/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1829
+im_detect: 1830/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1830
+im_detect: 1831/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1831
+im_detect: 1832/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1832
+im_detect: 1833/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1833
+im_detect: 1834/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1834
+im_detect: 1835/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1835
+im_detect: 1836/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1836
+im_detect: 1837/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1837
+im_detect: 1838/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1838
+im_detect: 1839/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1839
+im_detect: 1840/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1840
+im_detect: 1841/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1841
+im_detect: 1842/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1842
+im_detect: 1843/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1843
+im_detect: 1844/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1844
+im_detect: 1845/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1845
+im_detect: 1846/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1846
+im_detect: 1847/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1847
+im_detect: 1848/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1848
+im_detect: 1849/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1849
+im_detect: 1850/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1850
+im_detect: 1851/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1851
+im_detect: 1852/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1852
+im_detect: 1853/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1853
+im_detect: 1854/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1854
+im_detect: 1855/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1855
+im_detect: 1856/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1856
+im_detect: 1857/1965 nntime 0.027s  visdet 0.014s  visseg 0.026s  1857
+im_detect: 1858/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1858
+im_detect: 1859/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1859
+im_detect: 1860/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1860
+im_detect: 1861/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1861
+im_detect: 1862/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1862
+im_detect: 1863/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1863
+im_detect: 1864/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1864
+im_detect: 1865/1965 nntime 0.028s  visdet 0.013s  visseg 0.027s  1865
+im_detect: 1866/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1866
+im_detect: 1867/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1867
+im_detect: 1868/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1868
+im_detect: 1869/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1869
+im_detect: 1870/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1870
+im_detect: 1871/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1871
+im_detect: 1872/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1872
+im_detect: 1873/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1873
+im_detect: 1874/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1874
+im_detect: 1875/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1875
+im_detect: 1876/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1876
+im_detect: 1877/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1877
+im_detect: 1878/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1878
+im_detect: 1879/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1879
+im_detect: 1880/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1880
+im_detect: 1881/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1881
+im_detect: 1882/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1882
+im_detect: 1883/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1883
+im_detect: 1884/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1884
+im_detect: 1885/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1885
+im_detect: 1886/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1886
+im_detect: 1887/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1887
+im_detect: 1888/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1888
+im_detect: 1889/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1889
+im_detect: 1890/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1890
+im_detect: 1891/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1891
+im_detect: 1892/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1892
+im_detect: 1893/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1893
+im_detect: 1894/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1894
+im_detect: 1895/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1895
+im_detect: 1896/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1896
+im_detect: 1897/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1897
+im_detect: 1898/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1898
+im_detect: 1899/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1899
+im_detect: 1900/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1900
+im_detect: 1901/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1901
+im_detect: 1902/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1902
+im_detect: 1903/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1903
+im_detect: 1904/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1904
+im_detect: 1905/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1905
+im_detect: 1906/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1906
+im_detect: 1907/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1907
+im_detect: 1908/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1908
+im_detect: 1909/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1909
+im_detect: 1910/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1910
+im_detect: 1911/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1911
+im_detect: 1912/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1912
+im_detect: 1913/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1913
+im_detect: 1914/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1914
+im_detect: 1915/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1915
+im_detect: 1916/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1916
+im_detect: 1917/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1917
+im_detect: 1918/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1918
+im_detect: 1919/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1919
+im_detect: 1920/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1920
+im_detect: 1921/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1921
+im_detect: 1922/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1922
+im_detect: 1923/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1923
+im_detect: 1924/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1924
+im_detect: 1925/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1925
+im_detect: 1926/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1926
+im_detect: 1927/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1927
+im_detect: 1928/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1928
+im_detect: 1929/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1929
+im_detect: 1930/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1930
+im_detect: 1931/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1931
+im_detect: 1932/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1932
+im_detect: 1933/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1933
+im_detect: 1934/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1934
+im_detect: 1935/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1935
+im_detect: 1936/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1936
+im_detect: 1937/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1937
+im_detect: 1938/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1938
+im_detect: 1939/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1939
+im_detect: 1940/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1940
+im_detect: 1941/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1941
+im_detect: 1942/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1942
+im_detect: 1943/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1943
+im_detect: 1944/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1944
+im_detect: 1945/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1945
+im_detect: 1946/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1946
+im_detect: 1947/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1947
+im_detect: 1948/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1948
+im_detect: 1949/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1949
+im_detect: 1950/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1950
+im_detect: 1951/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1951
+im_detect: 1952/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1952
+im_detect: 1953/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1953
+im_detect: 1954/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1954
+im_detect: 1955/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1955
+im_detect: 1956/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1956
+im_detect: 1957/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1957
+im_detect: 1958/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1958
+im_detect: 1959/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1959
+im_detect: 1960/1965 nntime 0.028s  visdet 0.013s  visseg 0.027s  1960
+im_detect: 1961/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1961
+im_detect: 1962/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1962
+im_detect: 1963/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  1963
+im_detect: 1964/1965 nntime 0.027s  visdet 0.013s  visseg 0.027s  1964
+im_detect: 1965/1965 nntime 0.027s  visdet 0.013s  visseg 0.026s  Evaluating detections
+Writing aeroplane VOC results file
+Writing bicycle VOC results file
+Writing bird VOC results file
+Writing boat VOC results file
+Writing bottle VOC results file
+Writing bus VOC results file
+Writing car VOC results file
+Writing cat VOC results file
+Writing chair VOC results file
+Writing cow VOC results file
+Writing diningtable VOC results file
+Writing dog VOC results file
+Writing horse VOC results file
+Writing motorbike VOC results file
+Writing person VOC results file
+Writing pottedplant VOC results file
+Writing sheep VOC results file
+Writing sofa VOC results file
+Writing train VOC results file
+Writing tvmonitor VOC results file
+VOC07 metric? No
+/home/anton/minming/kiktech/new-4d2-8-16u2/lib/datasets/voc_eval.py:246: RuntimeWarning: invalid value encountered in true_divide
+  rec = tp / float(npos)
+AP for aeroplane = nan
+AP for bicycle = nan
+AP for bird = nan
+AP for boat = nan
+AP for bottle = nan
+AP for bus = nan
+AP for car = nan
+AP for cat = nan
+AP for chair = nan
+AP for cow = nan
+AP for diningtable = nan
+AP for dog = nan
+AP for horse = nan
+AP for motorbike = nan
+AP for person = 0.0000
+AP for pottedplant = nan
+AP for sheep = nan
+AP for sofa = nan
+AP for train = nan
+AP for tvmonitor = nan
+Mean AP = nan
+~~~~~~~~
+Results:
+nan
+nan
+nan
+nan
+nan
+nan
+nan
+nan
+nan
+nan
+nan
+nan
+nan
+nan
+0.000
+nan
+nan
+nan
+nan
+nan
+nan
+~~~~~~~~
+
+--------------------------------------------------------------
+Results computed with the **unofficial** Python eval code.
+Results should be very close to the official MATLAB eval code.
+Recompute with `./tools/reval.py --matlab ...` for your paper.
+-- Thanks, The Management
+--------------------------------------------------------------
+evaluation time: 6.278s
+Evaluating segmentation
+Scores: P 91.74, R 94.41, IoU 86.88, Acc 99.45
+test time: 297.9950s
+FPS: 6.5941
