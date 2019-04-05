@@ -7,6 +7,8 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
+import matplotlib
+matplotlib.use('Agg')
 import _init_paths
 import os
 import sys
@@ -35,6 +37,56 @@ from model.faster_rcnn.resnet import resnet
 from model.faster_rcnn.mobilenet import mobilenet
 from model.faster_rcnn.shufflenet import shufflenet
 
+#Added by Minming, to log the arguments
+#timestamp for this run
+import datetime
+timestamp = datetime.datetime.now().isoformat()
+timestamp_folder = timestamp.replace(":","").replace("-","")
+
+
+from functools import wraps
+class log_args(object):
+    def __init__(self, logfile="args"):
+        self.logfile = logfile
+        path = os.path.dirname(self.logfile)
+        try:
+            os.makedirs(path)
+        except Exception as e:
+            print(str(e))
+
+    def __call__(self, func):
+        @wraps(func)
+        def wrapped_function(*args, **kwargs):
+
+            system_args = func()
+
+            #parse and save args here
+            self.save_args(system_args)
+
+            return system_args
+        return wrapped_function
+
+    def get_git_revision_short_hash(self):
+        import subprocess
+        #need to remove the last change line
+        return subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD'])[:-1]
+
+    def save_args(self, system_args):
+        import datetime
+        keys_to_save = ["batch_size", "dataset", "lr", "net"]
+        logged_args_dict = {k: vars(system_args)[k]
+                            for k in keys_to_save}
+
+        logged_args_dict['timestamp'] = timestamp
+        logged_args_dict['out'] = os.path.dirname(os.path.abspath(self.logfile))
+        logged_args_dict['githash'] = self.get_git_revision_short_hash()
+
+        import json
+        with open(self.logfile, "w") as f:
+            f.write(json.dumps(logged_args_dict, indent=1))
+
+@log_args(os.path.join("logs", timestamp_folder, "args"))
+#End add by Minming to log the args
 def parse_args():
     """
     Parse input arguments
@@ -372,6 +424,8 @@ if __name__ == '__main__':
             print("fasterRCNN.RCNN_cls_score")
             for p in fasterRCNN.RCNN_cls_score.parameters(): print(p.data)
 
+    logboard_logs = []
+
     for epoch in range(args.start_epoch, args.max_epochs + 1):
         # setting to train mode
         fasterRCNN.train()
@@ -392,9 +446,6 @@ if __name__ == '__main__':
             dl_data.data.resize_(data[4].size()).copy_(data[4])
             # print('type(dl_data)', type(dl_data), dl_data.type())
             # print(dl_data.max())
-
-            #here to check how the gt_boxes is copied
-            # pdb.set_trace()
 
             fasterRCNN.zero_grad()
             rois, cls_prob, bbox_pred, \
@@ -420,6 +471,7 @@ if __name__ == '__main__':
             if args.net == "vgg16":
                 clip_gradient(fasterRCNN, 10.)
             optimizer.step()
+
 
             if step % args.disp_interval == 0:
                 end = time.time()
@@ -458,7 +510,43 @@ if __name__ == '__main__':
                         'loss_rcnn_box': loss_rcnn_box,
                         'loss_drive_line': loss_drive_line
                     }
-                    logger.add_scalars("logs_s_{}/losses".format(args.session), info, (epoch - 1) * iters_per_epoch + step)
+                    #Mod by Minming qian for logboard style logs
+                    logger.add_scalars(os.path.join(timestamp_folder,"losses"), info, (epoch - 1) * iters_per_epoch + step)
+
+                log_info = {
+                    'loss': loss_temp,
+                    'loss_rpn_cls': loss_rpn_cls,
+                    'loss_rpn_box': loss_rpn_box,
+                    'loss_rcnn_cls': loss_rcnn_cls,
+                    'loss_rcnn_box': loss_rcnn_box,
+                    'loss_drive_line': loss_drive_line,
+                    'lr': lr,
+                    'epoch': epoch,
+                    'iteration': step,
+                    'elapsed_time': end - start,
+                }
+                logboard_logs.append(log_info)
+
+                import json
+                with open(os.path.join("logs", timestamp_folder, 'log'),"w") as f:
+                    f.write(json.dumps(logboard_logs, indent=1))
+
+                def plot_loss_for_logboard(logboard_log):
+                    from collections import defaultdict
+                    import matplotlib.pyplot as plt
+
+                    loss_lists = defaultdict(list)
+                    [[loss_lists[key].append(value) for key, value in x.items()] for x in logboard_logs]
+
+                    items_to_be_plot = ["loss", "loss_rpn_cls", "loss_rpn_box",
+                                        "loss_rcnn_cls", "loss_rcnn_box", "loss_drive_line"]
+                    fig, ax = plt.subplots()
+                    [ax.plot(loss_lists[key], label=key) for key in loss_lists.keys() if key in items_to_be_plot]
+                    legend = ax.legend(loc='upper right', shadow=True, fontsize='x-large')
+                    plt.savefig(os.path.join("logs", timestamp_folder, 'loss.png'))
+
+                plot_loss_for_logboard(logboard_logs)
+
 
                 loss_temp = 0
                 start = time.time()
@@ -475,6 +563,8 @@ if __name__ == '__main__':
                 'class_agnostic': args.class_agnostic,
             }, save_name)
             print('save model: {}'.format(save_name))
+
+
 
 
     if args.use_tfboard:

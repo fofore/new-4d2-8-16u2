@@ -17,26 +17,29 @@ input_size=[480, 640]
 width_mult = 1.
 
 # Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved.
-class FrozenBatchNorm2d(nn.Module):
-   """
-   BatchNorm2d where the batch statistics and the affine parameters
-   are fixed
-   """
+# class FrozenBatchNorm2d(nn.Module):
+#    """
+#    BatchNorm2d where the batch statistics and the affine parameters
+#    are fixed
+#    """
+#
+#    def __init__(self, n):
+#        super(FrozenBatchNorm2d, self).__init__()
+#        self.register_buffer("weight", torch.ones(n))
+#        self.register_buffer("bias", torch.zeros(n))
+#        self.register_buffer("running_mean", torch.zeros(n))
+#        self.register_buffer("running_var", torch.ones(n))
+#
+#    def forward(self, x):
+#        #modified as suggested by jiewei
+#        scale = self.weight * (self.running_var + 0.000000001).rsqrt()
+#        bias = self.bias - self.running_mean * scale
+#        scale = scale.reshape(1, -1, 1, 1)
+#        bias = bias.reshape(1, -1, 1, 1)
+#        return x * scale + bias
 
-   def __init__(self, n):
-       super(FrozenBatchNorm2d, self).__init__()
-       self.register_buffer("weight", torch.ones(n))
-       self.register_buffer("bias", torch.zeros(n))
-       self.register_buffer("running_mean", torch.zeros(n))
-       self.register_buffer("running_var", torch.ones(n))
-
-   def forward(self, x):
-       #modified as suggested by jiewei
-       scale = self.weight * (self.running_var + 0.000000001).rsqrt()
-       bias = self.bias - self.running_mean * scale
-       scale = scale.reshape(1, -1, 1, 1)
-       bias = bias.reshape(1, -1, 1, 1)
-       return x * scale + bias
+## Mod by Minming to not froze
+FrozenBatchNorm2d = nn.BatchNorm2d
 
 def conv_bn(inp, oup, stride):
     return nn.Sequential(
@@ -575,7 +578,7 @@ class shufflenet(_fasterRCNN):
             self.load_state_dict(model_dict)
 
             #todo here we fix the parameters load from the pretrained detection model
-            fix = True
+            fix = False
             if fix and self.training:
                 for p in self.RCNN_rpn.RPN_Conv.parameters(): p.requires_grad = False
                 for p in self.RCNN_rpn.RPN_cls_score.parameters(): p.requires_grad = False
